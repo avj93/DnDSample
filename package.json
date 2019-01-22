@@ -1,5 +1,6 @@
 {
-  "name": "reorder-sample-app",
+  "name": "DnD-sample",
+  "homepage": "https://avj93.github.io/DnDSample",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,11 +9,16 @@
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
   },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
