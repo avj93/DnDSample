@@ -9,7 +9,7 @@ class App extends React.Component {
 
   /* onDragEnd - when drag ends, required */
   onDragEnd = (result) => {
-    const { destination, source, draggableId, type } = result;
+    const { destination, source, draggableId } = result;
 
     // dropped midway
     if (!destination)
@@ -18,8 +18,6 @@ class App extends React.Component {
     // dropped back at the same place of origin
     if (destination.droppableId === source.droppableId && destination.index === source.index)
       return;
-
-    let newState = {};
 
     // Vertical drag and drop of rows within the column ie Moving within same list(column)
     const newRowIds = Array.from(this.state.rowIds);
