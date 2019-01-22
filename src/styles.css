@@ -1,0 +1,32 @@
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 500px;
+}
+
+th {
+  color: white;
+  background-color: #11749E;
+  padding: 12px 12px;
+  text-align: center;
+}
+
+td {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+  width: 50%;
+}
+
+tr {
+  transition: background-color 0.2s ease;
+}
+
+.rowContainer:hover {
+  background-color: #deeaee;
+}
+
+.draggingRowContainer {
+  display: table;
+  background-color: #deeaee;
+}
