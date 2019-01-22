@@ -1,12 +1,20 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Component } from 'react';
 import { Droppable } from 'react-beautiful-dnd';
-import Row from './row';
+import Row from './row.js';
 import './styles.css';
 import constants from './data/constants';
 
-const Rows = ({ rows }) => (
-  rows.map((row, index) => <Row key={row.id} row={row} index={index} />)
-);
+class Rows extends Component {
+  shouldComponentUpdate(nextProps) {
+    if (nextProps.rows === this.props.rows) return false;
+
+    return true;
+  }
+
+  render() {
+    return (this.props.rows.map((row, index) => <Row key={row.id} row={row} index={index} />));
+  }
+}
 
 export default class DataTable extends PureComponent {
   render() {

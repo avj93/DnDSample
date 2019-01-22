@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import './styles.css';
 
-export default class extends PureComponent {
+export default class Row extends PureComponent {
   render() {
     const {
       row: {
